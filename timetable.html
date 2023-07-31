@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timetable</title>
+    <link rel="stylesheet" href="./css/app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function (){
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        })
+    </script>
+</head>
+<body>
+  <div class="" id="header"></div>
+     
+      <main>
+        <div class="conatiner p-5">
+            <div class="row mb-3">
+                <div class="col-12 col-md-12">
+                    <div class="text-center">
+                        <h1 class="">Timetable</h1>
+                         <p>Check out our wide variety of times and classes to suit your busy schedule.</p>
+                         <a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">GET STARTED TRAINING TODAY</a>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        
+          <div class="row" id="tables">
+            <div class="col-12 col-md-12">
+                <!-- classes timetable -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg">
+                  <div class="container">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">          
+                        <li class="nav-item">
+                          <button class="nav-link" href="#" id="jiu-jitsu" onclick="showTable('jiu-jitsu')">Jiu-jitsu classes</button>
+                        </li>
+                        <li class="nav-item">
+                          <button class="nav-link active" aria-current="page" onclick="showTable('karate')" href="" id="karate">Karate classes</button>
+                        </li>
+                        <li class="nav-item">
+                          <button class="nav-link" href="#" id="mauythai" onclick="showTable('mauythai')">Mauy Thai classes</button>
+                        </li>
+                        <li class="nav-item">
+                          <button class="nav-link" href="#" id="kids" onclick="showTable('kids')">Kids classes</button>
+                        </li>
+                        <li class="nav-item">
+                          <button class="nav-link" href="#" id="judo" onclick="showTable('judo')">Judo classes</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </nav>
+              <div class="table-responsive">
+                <table class="table table-dark table-bordered table-hover text-center" id="jiu-jitsu">
+                  <thead>
+                    <tr>
+                      <th>TIME</th>
+                      <th>MONDAY</th>
+                      <th>TUESDAY</th>
+                      <th>WEDNESTDAY</th>
+                      <th>THURSDAY</th>
+                      <th>FRIDAY</th>
+                      <th>SAURDAY</th>
+                      <th>SUNDAY</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>06:00 - 07:30 </td>
+                      <td class="bg-primary">Jiu-jitsu</td>
+                      <td></td>
+                      <td></td>
+                      <td class="bg-primary">Jiu-jitsu</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>08:00 - 10:00</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td class="bg-primary">Jiu-jitsu</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>10:30 - 12:00</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>13:00 - 14:30</td>
+                      <td class="bg-primary">Open mat/ personal parcitce</td>
+                      <td class="bg-primary">Open mat/ personal parcitce</td>
+                      <td class="bg-primary">Open mat/ personal parcitce</td>
+                      <td class="bg-primary">Open mat/ personal parcitce</td>
+                      <td class="bg-primary">Open mat/ personal parcitce</td>
+                      <td ></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>15:00 - 17:00</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td class="bg-primary">Jiu-jitsu</td>
+                    </tr>
+                    <tr>
+                      <td>17:30 - 19:00</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td class="bg-primary">Jiu-jitsu</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>19:00 - 21:00</td>
+                      <td class="bg-primary">Jiu-jitsu</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+             <div class="table-responsive">
+              <table class="table table-dark table-hover table-bordered text-center d-none" id="karate">
+                <thead>
+                  <tr>
+                    <th>TIME</th>
+                    <th>MONDAY</th>
+                    <th>TUESDAY</th>
+                    <th>WEDNESTDAY</th>
+                    <th>THURSDAY</th>
+                    <th>FRIDAY</th>
+                    <th>SAURDAY</th>
+                    <th>SUNDAY</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>06:00 - 07:30 </td>
+                    <td class="bg-primary">Karate</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>08:00 - 10:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>10:30 - 12:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="bg-primary">Karate</td>
+                  </tr>
+                  <tr>
+                    <td>13:00 - 14:30</td>
+                    <td class="bg-primary">Open mat/ personal parcitce</td>
+                    <td class="bg-primary">Open mat/ personal parcitce</td>
+                    <td class="bg-primary">Open mat/ personal parcitce</td>
+                    <td class="bg-primary">Open mat/ personal parcitce</td>
+                    <td class="bg-primary">Open mat/ personal parcitce</td>
+                    <td class="bg-primary">Karate</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>15:00 - 17:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>17:30 - 19:00</td>
+                    <td class="bg-primary">Karate</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>19:00 - 21:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="bg-primary">Karate</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+             </div>
+             
+              <div class="table-responsive">
+                <table class="table table-dark table-hover table-bordered text-center d-none" id="mauythai">
+                  <thead>
+                    <tr>
+                      <th>TIME</th>
+                      <th>MONDAY</th>
+                      <th>TUESDAY</th>
+                      <th>WEDNESTDAY</th>
+                      <th>THURSDAY</th>
+                      <th>FRIDAY</th>
+                      <th>SAURDAY</th>
+                      <th>SUNDAY</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>06:00 - 07:30 </td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td class="bg-primary">Muay Thai</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>08:00 - 10:00</td>
+                      <td class="bg-primary">Muay Thai</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>10:30 - 12:00</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>13:00 - 14:30</td>
+                      <td class="bg-primary">Open mat/ personal parcitce</td>
+                      <td class="bg-primary">Open mat/ personal parcitce</td>
+                      <td class="bg-primary">Open mat/ personal parcitce</td>
+                      <td class="bg-primary">Open mat/ personal parcitce</td>
+                      <td class="bg-primary">Open mat/ personal parcitce</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>15:00 - 17:00</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td class="bg-primary">Muay Thai</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>17:30 - 19:00</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td class="bg-primary">Muay Thai</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>19:00 - 21:00</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>            
+             
+             <div class="table-responsive">
+              <table class="table table-dark table-hover table-bordered text-center d-none" id="kids">
+                <thead>
+                  <tr>
+                    <th>TIME</th>
+                    <th>MONDAY</th>
+                    <th>TUESDAY</th>
+                    <th>WEDNESTDAY</th>
+                    <th>THURSDAY</th>
+                    <th>FRIDAY</th>
+                    <th>SAURDAY</th>
+                    <th>SUNDAY</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>06:00 - 07:30 </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>08:00 - 10:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>10:30 - 12:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>13:00 - 14:30</td>
+                    <td class="bg-primary">Open mat/ personal parcitce</td>
+                    <td class="bg-primary">Open mat/ personal parcitce</td>
+                    <td class="bg-primary">Open mat/ personal parcitce</td>
+                    <td class="bg-primary">Open mat/ personal parcitce</td>
+                    <td class="bg-primary">Open mat/ personal parcitce</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>15:00 - 17:00</td>
+                    <td class="bg-primary">Kids jiu-jitsu</td>
+                    <td class="bg-primary">Kids judo</td>
+                    <td class="bg-primary">Kids karate</td>
+                    <td class="bg-primary">Kids jiu-jitsu</td>
+                    <td class="bg-primary">Kids judo</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>17:30 - 19:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>19:00 - 21:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+             </div>
+            
+                <div class="table-responsive">
+                  <table class="table table-dark table-hover table-bordered text-center d-none" id="judo">
+                    <thead>
+                      <tr>
+                        <th>TIME</th>
+                        <th>MONDAY</th>
+                        <th>TUESDAY</th>
+                        <th>WEDNESTDAY</th>
+                        <th>THURSDAY</th>
+                        <th>FRIDAY</th>
+                        <th>SAURDAY</th>
+                        <th>SUNDAY</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>06:00 - 07:30 </td>
+                        <td></td>
+                        <td></td>
+                        <td class="bg-primary">Judo</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>08:00 - 10:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>10:30 - 12:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="bg-primary">Judo</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>13:00 - 14:30</td>
+                        <td class="bg-primary">Open mat/ personal parcitce</td>
+                        <td class="bg-primary">Open mat/ personal parcitce</td>
+                        <td class="bg-primary">Open mat/ personal parcitce</td>
+                        <td class="bg-primary">Open mat/ personal parcitce</td>
+                        <td class="bg-primary">Open mat/ personal parcitce</td>
+                        <td></td>
+                        <td class="bg-primary">Judo</td>
+                      </tr>
+                      <tr>
+                        <td>15:00 - 17:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>17:30 - 19:00</td>
+                        <td></td>
+                        <td></td>
+                        <td class="bg-primary">Judo</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>19:00 - 21:00</td>
+                        <td></td>
+                        <td class="bg-primary">Judo</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                
+                </div>
+       
+      </main>
+        
+        <div id="footer"></div>  
+
+</body>
+</html>

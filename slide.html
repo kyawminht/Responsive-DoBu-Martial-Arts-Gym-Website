@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick-theme.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        img{
+            height: 100%;
+        }
+        .slick-next::before{
+            color: red;
+        }
+        .slick-prev::before{
+            color: red;
+        }
+        .slick-dots li button::before{
+            color: rebeccapurple;
+        }
+
+        .slick-next {
+    right: 20px;
+}
+.slick-prev {
+    
+    left: 20px;
+    z-index: 3;
+}
+    </style>
+</head>
+<body>
+    <div class="container my-4" id="portfolio">
+        <div class="row">
+         
+          <div class="col-md-12">
+            <div class="portfolio">
+              <div class="card mx-2 border" style="width: 18rem;">
+                <img src="./images/download.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4>Gucci Bag</h4>
+                  <p class="card-text text-muted">$4000</p>
+                </div>
+              </div>
+              <div class="card mx-2 border" style="width: 18rem;">
+                <img src="./images/download.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4>Gucci Bag</h4>
+                  <p class="card-text text-muted">$4000</p>
+                </div>
+              </div>
+              <div class="card mx-2 border" style="width: 18rem;">
+                <img src="./images/download.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4>Gucci Bag</h4>
+                  <p class="card-text text-muted">$6000</p>
+                </div>
+              </div>
+              <div class="card mx-2 border-0" style="width: 18rem;">
+                <img src="./images/download.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4>Gucci Bag</h4>
+                  <p class="card-text text-muted">$2000</p>
+                </div>
+              </div>
+              <div class="card mx-2 border-0" style="width: 18rem;">
+                <img src="./images/download.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4>Gucci Bag</h4>
+                  <p class="card-text text-muted">$2000</p>
+                </div>
+              </div>
+              <div class="card mx-2 border-0" style="width: 18rem;">
+                <img src="./images/download.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4>Gucci Bag</h4>
+                  <p class="card-text text-muted">$2000</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="./node_modules/slick-carousel/slick/slick.min.js"></script>
+      <script>
+        $('.portfolio').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 2,
+  centerMode:true,
+  autoplay: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll:2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+				
+      </script>
+
+</body>
+</html>
