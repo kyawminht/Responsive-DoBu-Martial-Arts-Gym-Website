@@ -1,0 +1,165 @@
+
+<title>user-list</title>
+<link rel="stylesheet" href="./css/app.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function (){
+        $("#header").load("./header.html");
+        $("#footer").load("./footer.html");
+    })
+</script>
+</head>
+<body>
+<div id="header"></div>
+<div class="container p-5">
+  <div class="row">
+    <div class="col-md-10">
+      <div class="d-flex justify-content-between">
+        <h3 class="text-center">User List</h3>
+        <button
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#createModal"
+        >
+        <i class="ri-add-line"></i>Create New
+        </button>
+      </div>
+      <div class="table-responsive">
+        <table id="userDataTable" class="table table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- User data rows will be inserted here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- edit modal -->
+
+<div id="editModal" class="modal-edit">
+  <div class="modal-content-edit">
+    <span class="close-edit">&times;</span>
+    <h2>Edit User Data</h2>
+    <form id="editForm">
+      <label for="editName">Name:</label>
+      <input type="text" id="editName" name="editName" />
+      <label for="editEmail">Email:</label>
+      <input type="email" id="editEmail" name="editEmail" />
+      <label for="editPassword">Password:</label>
+      <input type="password" id="editPassword" name="editPassword" />
+      <button type="submit">Save Changes</button>
+    </form>
+  </div>
+</div>
+<!-- create model -->
+<div
+  class="modal fade"
+  id="createModal"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Create</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="container mt-5">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-12">
+              <div class="card custom-modal-body">
+                <div class="card-header">
+                  <h4>Create New</h4>
+                </div>
+                <div class="card-body">
+                  <form id="createForm">
+                    <div class="form-field mb-3">
+                      <label for="name">Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        name="name"
+                      />
+                      <small class="text-danger"></small>
+                    </div>
+                    <div class="form-field mb-3">
+                      <label for="email">Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                      />
+                      <small class="text-danger"></small>
+                    </div>
+
+                    <div class="form-field mb-3">
+                      <label for="password">Password:</label>
+                      <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        autocomplete="off"
+                        class="form-control"
+                      />
+                      <small class="text-danger"></small>
+                    </div>
+
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      type="submit"
+                    >
+                      Register
+                    </button>
+                  </form>
+                  <!-- success message element -->
+                  <div id="successMessage" style="display: none">
+                    <h5>Creating new data has been successful</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="footer"></div>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./user.js"></script>
+
+  
+ 
+
